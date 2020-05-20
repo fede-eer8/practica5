@@ -1,0 +1,69 @@
+<ActionBar>
+    <!-- Should remove the navigation button -->
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="onBackButtonTap()">
+    </NavigationButton>
+    <!-- <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem> -->
+    <Label [text]="isEnabled ? ''+category : 'Productos'" horizontalAlignment="center"></Label>
+    <ActionItem ios.position="right" android.position="popup" (tap)="toggleFilter()">
+        <Label [text]="isEnabled ? 'Todos' : ''+category"></Label>
+        <Label [text]="isEnabled ? 'Todos' : ''+category"></Label>
+    </ActionItem>
+</ActionBar>
+
+<GridLayout>
+    <RadListView [items]="products" [filteringFunction]="myFilteringFunc" (itemTap)="onProductTap($event)">
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout class="listItemTemplateGrid">
+                <Image [src]="item.imageUrl" height="250" stretch="aspectFill"></Image>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label [text]="item.name"></Label>
+                        <Label>
+                            <FormattedString>
+                                <Span text="ARS$ "></Span>
+                                <Span [text]="item.price"></Span>
+
+                            </FormattedString> 
+                        </Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </ng-template>
+
+        <!-- >> angular-listview-item-animations-html -->
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
+        <!-- << angular-listview-item-animations-html -->
+    </RadListView>
+</GridLayout>
+
+<!-- <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+
+    <StackLayout orientation="horizontal"> -->
+<!-- <Label [text]="isEnabled ? 'Mostrar Todos' : 'Mostrar solo categoria '+category" (tap)="toggleFilter()"></Label> -->
+<!-- <Switch checked="true" (checkedChange)="toggleFilter()"></Switch> -->
+
+<!-- </StackLayout>
+
+    <RadListView [items]="products" #myListView row="1" #myListView [filteringFunction]="myFilteringFunc" (itemTap)="onProductTap($event)">
+        <ng-template tkListItemTemplate let-product="item">
+            <StackLayout class="items-list__item">
+                <GridLayout rows="auto, *" class="listItem-template-grid">
+                    <Image [src]="product.imageUrl" rowSpan="2" width="120" height="120" margin="1" verticalAlignment="top"></Image>
+                    <Label row="0" [text]="product.name"></Label>
+                    <Label row="1" [text]="product.description" textWrap="true"></Label>
+                    <Label row="2" colSpan="2" textWrap="true" fontSize="12" horizontalAlignment="left" verticalAlignment="bottom" margin="3">
+                        <FormattedString>
+                            <Span text="ARS$ "></Span>
+                            <Span [text]="product.price"></Span> -->
+<!-- <Span text="/day"></Span> -->
+<!-- </FormattedString> 
+                    </Label>
+                </GridLayout>
+            </StackLayout> -->
+
+<!-- </ng-template>
+    </RadListView>
+
+    <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+</GridLayout> -->

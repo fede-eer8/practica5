@@ -1,0 +1,75 @@
+<ActionBar>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem>
+    <Label text="Settings"></Label>
+</ActionBar>
+
+<GridLayout>
+    <RadListView (itemTap)="onProductTap($event)">
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout class="listItemTemplateGrid">
+                <Image src="item.imageUrl" height="250" stretch="aspectFill"></Image>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label text="item.name"></Label>
+                        <Label text="item.price"></Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </ng-template>
+
+        <!-- >> angular-listview-item-animations-html -->
+        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" ios:itemHeight="250" dynamicItemSize="false" spanCount="2"></ListViewGridLayout>
+        <!-- << angular-listview-item-animations-html -->
+    </RadListView>
+</GridLayout>
+
+<!-- <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
+    <StackLayout row="0" class="nt-drawer__header">
+        <Image (tap)="logout()" class="nt-drawer__header-image fas t-36" src='result.photo'></Image>
+        <Label class="nt-drawer__header-brand" text='result.displayName'></Label>
+        <Label class="nt-drawer__header-footnote" text='result.userToken'></Label>
+    </StackLayout>
+
+    <ScrollView row="1" class="nt-drawer__body">
+        <StackLayout>
+            <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="">
+                <Label col="0" text="&#xf015;" class="nt-icon fas"></Label>
+                <Label col="1" text="Home" class="p-r-10"></Label>
+            </GridLayout>
+
+            <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="">
+                <Label col="0" text="&#xf1ea;" class="nt-icon fas"></Label>
+                <Label col="1" text="Browse" class="p-r-10"></Label>
+            </GridLayout>
+
+            <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="">
+                <Label col="0" text="&#xf100;" class="nt-icon fas"></Label>
+                <Label col="1" text="Categories" class="p-r-10"></Label>
+            </GridLayout>
+
+            <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="">
+                <Label col="0" text="&#xf002;" class="nt-icon fas"></Label>
+                <Label col="1" text="Search" class="p-r-10"></Label>
+            </GridLayout>
+
+            <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="">
+                <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                <Label col="1" text="Featured" class="p-r-10"></Label>
+            </GridLayout>
+
+            <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="">
+                <Label col="0" text="&#xf07a;" class="nt-icon fas"></Label>
+                <Label col="1" text="Products" class="p-r-10"></Label>
+            </GridLayout>
+
+            <StackLayout class="hr-dark"></StackLayout>
+
+            <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="">
+                <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
+                <Label col="1" text="Settings" class="p-r-10"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout> -->

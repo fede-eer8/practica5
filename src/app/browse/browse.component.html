@@ -1,0 +1,106 @@
+<ActionBar>
+    <!-- Should remove the navigation button -->
+    <!-- <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem> -->
+    <!-- <Label *ngIf=!_isEnabled text="Browse" horizontalAlignment="left"></Label> -->
+    <ActionItem ios.position="left">
+        <GridLayout width="auto">
+            <SearchBar hint="Enter search term here ..." [text]="searchPhrase" (textChange)="onTextChanged($event)" (clear)="onClear($event)" (submit)="onSubmit($event)">
+            </SearchBar>
+        </GridLayout>
+    </ActionItem>
+    <!-- <ActionItem ios.position="right" android.position="popup" (tap)="onTap($event)">
+        <Label icon="font://&#xf0b0;" class="fas t-36"></Label>
+    </ActionItem> -->
+    <!-- <ActionItem icon="font://&#xf002;" class="fas" (tap)="onSearch($event)" ios.position="left"></ActionItem> -->
+    <!-- <ActionItem icon="font://&#xf0b0;" class="fas" (tap)="onTap($event)" ios.position="right"></ActionItem> -->
+    <!-- <ActionItem ios.position="left" android.position="popup" (tap)="onSearch($event)">
+        <Label text="Buscar"></Label>
+    </ActionItem> -->
+</ActionBar>
+
+
+<GridLayout>
+    <!-- <SearchBar *ngIf=_isEnabled hint="Enter search term here ..." [text]="searchPhrase" (textChange)="onTextChanged($event)" (clear)="onClear($event)" (submit)="onSubmit($event)">
+    </SearchBar> -->
+    <RadListView row="0" [items]="products" (itemTap)="onProductTap($event)" [filteringFunction]="myFilteringFunc">
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout class="listItemTemplateGrid">
+                <Image [src]="item.imageUrl" height="120" stretch="aspectFill" loadMode="async"></Image>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label [text]="item.name" style="padding-right: 0; padding-top: 0; margin-top: -4; margin-bottom: -4;"></Label>
+                        <Label style="padding-right: 0; padding-bottom: 0; margin-top: -12; font-size: 20;"><FormattedString>
+                            <Span text="ARS$ "></Span>
+                            <Span [text]="item.price"></Span>
+                        </FormattedString></Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </ng-template>
+
+        <!-- >> angular-listview-item-animations-html -->
+        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" ios:itemHeight="250" dynamicItemSize="false" spanCount="2"></ListViewGridLayout>
+        <!-- << angular-listview-item-animations-html -->
+    </RadListView>
+    <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+</GridLayout>
+
+<!-- <ListPicker [items]="category" selectedIndex="0" (selectedIndexChange)="onSelectedIndexChanged($event)"></ListPicker> -->
+
+<!-- <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+    <StackLayout orientation="horizontal">
+        <Button text="Categorias" class="-primary -rounded-sm" (tap)="onTap($event)"></Button>
+    </StackLayout> -->
+
+<!-- <RadListView [items]="products" #myListView row="1" (itemTap)="onProductTap($event)">
+        <ng-template tkListItemTemplate let-product="item">
+            <StackLayout class="items-list__item">
+                <GridLayout rows="auto, *" class="listItem-template-grid">
+                    <Image [src]="product.imageUrl" rowSpan="2" width="120" height="120" margin="1" verticalAlignment="top"></Image>
+                    <Label row="0" [text]="product.name"></Label>
+                    <Label row="1" [text]="product.description" textWrap="true"></Label>
+                    <Label row="2" colSpan="2" textWrap="true" fontSize="12" horizontalAlignment="left" verticalAlignment="bottom" margin="3">
+                        <FormattedString>
+                            <Span text="ARS$ "></Span>
+                            <Span [text]="product.price"></Span>  -->
+<!-- <Span text="/day"></Span> -->
+<!-- </FormattedString> 
+                    </Label>
+                </GridLayout>
+            </StackLayout>
+
+        </ng-template>
+    </RadListView> -->
+
+<!-- <RadListView [items]="products" (itemTap)="">
+        <ng-template tkListItemTemplate let-product="item">
+            <StackLayout class="items-list__item">
+                <GridLayout columns="auto, *, auto" rows="auto, 25" verticalAlignment="top">
+                    <Image [src]="product.imageUrl" rowSpan="2" width="120" height="120" margin="1" verticalAlignment="top"></Image>
+                    <Label [text]="product.name" textWrap="true" col="1" colSpan="2" minHeight="50" fontSize="16" margin="1"></Label>
+                    <Label col="1" colSpan="2" textWrap="true" fontSize="12" horizontalAlignment="left" verticalAlignment="bottom" margin="3">
+                        <FormattedString>
+                            <Span text="ARS$ "></Span>
+                            <Span [text]="product.price"></Span> -->
+<!-- <Span text="/day"></Span> -->
+<!-- </FormattedString> 
+                    </Label>
+                    <Label [text]="product.category" col="2" colSpan="2" color="#10C2B0" fontSize="14" verticalAlignment="bottom" margin="3"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ng-template>
+    </RadListView> -->
+
+<!-- <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+</GridLayout> -->
+
+<!-- <ListView [items]="items" (itemTap)="onItemTap($event)" class="list-group">
+    <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even"> -->
+<!-- The item template can only have a single root view container (e.g. GridLayout, StackLayout, etc.)-->
+<!-- <GridLayout>
+            <Label [text]="item.name" class="list-group-item"></Label>
+        </GridLayout>
+    </ng-template>
+</ListView> -->

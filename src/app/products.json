@@ -1,0 +1,224 @@
+{
+    "products": {
+        "product1": {
+            "id": "product1",
+            "name": "Terciopelo: elegancia modernizada",
+            "price": 50,
+            "category": "Deco",
+            "description": "Su tacto suave y amelocotonado, además de su brillo son algunas de las razones que han hecho del terciopelo uno de los materiales más valorados dentro del interiorismo. Se cree que su confección es originaria de Oriente, introduciéndose en Europa a través de Italia, donde fueron grandes productores de este tejido y otras telas también lujosas en la Edad Media.",
+            "imageStoragePath": "products/Deco/deco1.jpg",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/practica5-a0dd8.appspot.com/o/products%2FDeco%2Fdeco1.jpg?alt=media&token=8574fdee-f05b-4351-a815-b58a303dd446",
+            "discount": 4
+        },
+        "product2": {
+            "id": "product3",
+            "name": "GrahamYBrown",
+            "price": 80,
+            "category": "Deco",
+            "description": "Jarrones muy pequeños de tamaños diferentes Solo aptos para tallos cortos y delgados Tapa con signos intencionales de uso.",
+            "imageStoragePath": "products/Deco/deco2.jpg",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/practica5-a0dd8.appspot.com/o/products%2FDeco%2Fdeco2.jpg?alt=media&token=d5e3aee3-1670-4226-ab79-07386ef5f215",
+            "discount": 0
+        },
+        "product3": {
+            "id": "product4",
+            "name": "Set de baño Bath",
+            "price": 60,
+            "category": "Deco",
+            "description": "",
+            "imageStoragePath": "products/Deco/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product4": {
+            "id": "product5",
+            "name": "Espejo de pared 45 cm",
+            "price": 25,
+            "category": "Deco",
+            "description": "",
+            "imageStoragePath": "products/Deco/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product5": {
+            "id": "product6",
+            "name": "Set por 5 repasadores colors",
+            "price": 30,
+            "category": "Deco",
+            "description": "",
+            "imageStoragePath": "products/Deco/",
+            "imageUrl": "",
+            "discount": 8
+        },
+        "product6": {
+            "id": "product7",
+            "name": "Smart TV LED 50'' 4K",
+            "price": 500,
+            "category": "Tech",
+            "description": "",
+            "imageStoragePath": "products/Tech/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product7": {
+            "id": "product8",
+            "name": "Celular libre S10 negro 128gb",
+            "price": 600,
+            "category": "Tech",
+            "description": "",
+            "imageStoragePath": "products/Tech/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product8": {
+            "id": "product9",
+            "name": "Notebook Pavilion 2EN1 Intel Core I5",
+            "price": 1000,
+            "category": "Tech",
+            "description": "",
+            "imageStoragePath": "products/Tech/",
+            "imageUrl": "",
+            "discount": 10
+        },
+        "product9": {
+            "id": "product10",
+            "name": "Parlante bluetooth",
+            "price": 258,
+            "category": "Tech",
+            "description": "",
+            "imageStoragePath": "products/Tech/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product10": {
+            "id": "product11",
+            "name": "Neymar",
+            "price": 264,
+            "category": "Books",
+            "description": "",
+            "imageStoragePath": "products/Books/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product11": {
+            "id": "product12",
+            "name": "Rafinha",
+            "price": 895,
+            "category": "Books",
+            "description": "",
+            "imageStoragePath": "products/Books/",
+            "imageUrl": "",
+            "discount": 15
+        },
+        "product12": {
+            "id": "product13",
+            "name": "Cillessen",
+            "price": 645,
+            "category": "Books",
+            "description": "El nombre del viento",
+            "imageStoragePath": "products/Books/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product13": {
+            "id": "product14",
+            "name": "Mesa de arrime Centro 45x49cm",
+            "price": 1200,
+            "category": "Deco",
+            "description": "",
+            "imageStoragePath": "products/Deco/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product14": {
+            "id": "product17",
+            "name": "PS4 1TB FIFA 20",
+            "price": 1654,
+            "category": "Tech",
+            "description": "",
+            "imageStoragePath": "products/Tech/",
+            "imageUrl": "",
+            "discount": 5
+        },
+        "product15": {
+            "id": "product18",
+            "name": "Smart TV OLED 55",
+            "price": 4685,
+            "category": "Tech",
+            "description": "",
+            "imageStoragePath": "products/Tech/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product16": {
+            "id": "product19",
+            "name": "Smart TV 75 4K",
+            "price": 5000,
+            "category": "Tech",
+            "description": "",
+            "imageStoragePath": "products/Tech/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product17": {
+            "id": "product20",
+            "name": "Whole-wheat pasta",
+            "price": 10,
+            "category": "Food",
+            "description": "",
+            "imageStoragePath": "products/Food/",
+            "imageUrl": "",
+            "discount": 20
+        },
+        "product18": {
+            "id": "product21",
+            "name": "Jarrón Khuduri 44x18 cm",
+            "price": 3000,
+            "category": "Deco",
+            "description": "",
+            "imageStoragePath": "products/Deco/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product19": {
+            "id": "product22",
+            "name": "oat risotto with Swiss chard",
+            "price": 75,
+            "category": "Food",
+            "description": "",
+            "imageStoragePath": "products/Food/",
+            "imageUrl": "",
+            "discount": 8
+        },
+        "product20": {
+            "id": "product23",
+            "name": "Mediterranean lentil salad with cucumbers",
+            "price": 68,
+            "category": "Food",
+            "description": "",
+            "imageStoragePath": "products/Food/",
+            "imageUrl": "",
+            "discount": 0
+        },
+        "product21": {
+            "id": "product24",
+            "name": "chickpea and spinach curry with brown rice",
+            "price": 66,
+            "category": "Food",
+            "description": "",
+            "imageStoragePath": "products/Food/food1.jpg",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/practica5-a0dd8.appspot.com/o/products%2FFood%2Ffood1.jpg?alt=media&token=2b5789ee-38db-470c-aae1-c6ad77ddf664",
+            "discount": 10
+        },
+        "product22": {
+            "id": "product25",
+            "name": "black bean veggie burger with steamed broccoli and sweet potato wedges",
+            "price": 87,
+            "category": "Food",
+            "description": "",
+            "imageStoragePath": "products/Food/food2.png",
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/practica5-a0dd8.appspot.com/o/products%2FFood%2Ffood2.png?alt=media&token=e834f9ed-24a7-4a2a-aef2-96fa4faa939b",
+            "discount": 0
+        }
+    }
+}

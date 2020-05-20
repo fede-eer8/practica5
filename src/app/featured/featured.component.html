@@ -1,0 +1,32 @@
+<ActionBar>
+    <!-- <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem> -->
+    <Label text="Featured"></Label>
+</ActionBar>
+
+<GridLayout>
+    <RadListView [items]="productsDisc" (itemTap)="onProductTap($event)">
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout class="listItemTemplateGrid">
+                <Image [src]="item.imageUrl" height="250" stretch="aspectFill"></Image>
+                <GridLayout verticalAlignment="bottom">
+                    <StackLayout class="labelsStackLayout">
+                        <Label [text]="item.name"></Label>
+                        <Label>
+                            <FormattedString>
+                                <Span text="ARS$ "></Span>
+                                <Span [text]="item.price-((item.price*item.discount)/100)"></Span> -->
+                                <!-- <Span text="/day"></Span> -->
+                            </FormattedString>
+                        </Label>
+                    </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </ng-template>
+
+        <!-- >> angular-listview-item-animations-html -->
+        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" ios:itemHeight="250" dynamicItemSize="false" spanCount="2"></ListViewGridLayout>
+        <!-- << angular-listview-item-animations-html -->
+    </RadListView>
+</GridLayout>

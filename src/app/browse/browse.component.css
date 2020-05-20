@@ -1,0 +1,18 @@
+RadListView {
+    margin-right: -2;
+}
+
+.listItemTemplateGrid {
+    background-color: white;
+    margin-bottom: 2;
+    margin-right: 2;
+}
+
+.labelsStackLayout {
+    background-color: rgba(219, 227, 231, 0.7);
+    padding-top: 4;
+    padding-bottom: -12;
+    padding-left: 2;
+    padding-right: 2;
+    height: 35;
+}

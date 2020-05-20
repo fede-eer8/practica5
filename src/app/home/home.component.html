@@ -1,0 +1,38 @@
+<ActionBar>
+    <!-- <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left"></ActionItem> -->
+    <Label [text]="isLogued ? ''+user.displayName : 'No User Logued'"></Label>
+</ActionBar>
+
+<GridLayout *ngIf="isLogued" columns="*,*,*" rows="*,*,*,*,*" sdkExampleTitle sdkToggleNavButton>
+    <Image [src]="user.photo" row="0" col="0" text="1" style="background-color: #0099CC; margin: 5;"></Image>
+    <!-- <Button [text]="isLogued ? ''+user.displayName : 'Login'" (tap)="login()" row="0" col="1" colSpan="2" style="background-color: #FFFF66; margin: 5;"></Button> -->
+    <Button text="Logout" (tap)="logout()" row=" 1 " col="1 " colSpan="2 " style="background-color: #AA0078; margin: 5; "></Button>
+    <Button text="4 " row="2 " col="1 " colSpan="3 " style="background-color: #8C489F; margin: 5; "></Button>
+    <Button text="5 " row="3 " col="1 " colSpan="3 " style="background-color: #CCFFFF; margin: 5; "></Button>
+    <Button text="6 " row="4 " col="1 " colSpan="3 " style="background-color: #0099CC; margin: 5; "></Button>
+</GridLayout>
+
+<GridLayout *ngIf="!isLogued" columns="*,*,*" rows="*,*,*,*,*" sdkExampleTitle sdkToggleNavButton>
+    <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;" row="0" col="0" text="1" style="background-color: #0099CC; margin: 5;"></Image>
+    <Button text="Login" (tap)="login()" row="0" col="1" colSpan="2" style="background-color: #FFFF66; margin: 5;"></Button>
+    <!-- <Button [text]="isLogued ? ''+user.displayName : 'Login'" (tap)="logout()" row=" 1 " col="1 " colSpan="2 " style="background-color: #AA0078; margin: 5; "></Button> -->
+    <Button text="4 " row="2 " col="1 " colSpan="3 " style="background-color: #8C489F; margin: 5; "></Button>
+    <Button text="5 " row="3 " col="1 " colSpan="3 " style="background-color: #CCFFFF; margin: 5; "></Button>
+    <Button text="6 " row="4 " col="1 " colSpan="3 " style="background-color: #0099CC; margin: 5; "></Button>
+</GridLayout>
+
+<!-- <GridLayout columns="*,2* " rows="2*,3* " backgroundColor="lightgray "> -->
+<!-- <Label text="Label 1 " col="0 " row="0 " backgroundColor="red "></Label> -->
+<!-- <Label text="Label 2 " col="1 " row="0 " backgroundColor="green "></Label>
+    <Label text="Label 3 " col="0 " row="1 " backgroundColor="blue "></Label>
+    <Label text="Label 4 " col="1 " row="1 " backgroundColor="yellow "></Label> -->
+<!-- <Button text="Logout " col="1 " row="0 " (tap)="logout() "></Button>
+</GridLayout> -->
+
+<!-- <GridLayout class="page__content ">
+    <Label class="page__content-icon fas " text="&#xf015; "></Label>
+    <Label class="page__content-placeholder " [text]="nombres "></Label>
+    <Button text="Logout " (tap)="logout() "></Button>
+</GridLayout> -->

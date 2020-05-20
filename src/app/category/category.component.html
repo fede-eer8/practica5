@@ -1,0 +1,24 @@
+<ActionBar>
+    <!-- Should remove the navigation button -->
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="onBackButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="right">
+    </ActionItem>
+    <Label text="Categories" horizontalAlignment="center"></Label>
+</ActionBar>
+
+<!-- <ListPicker [items]="category" selectedIndex="0" (selectedIndexChange)="onSelectedIndexChanged($event)"></ListPicker> -->
+
+<ListView [items]="category" (itemTap)="onItemTap($event)" class="list-group" [itemTemplateSelector]="templateSelector">
+    <ng-template nsTemplateKey="red" let-category="item" let-i="index" let-odd="odd" let-even="even">
+        <!-- The item template can only have a single root view container (e.g. GridLayout, StackLayout, etc.)-->
+        <GridLayout height="200">
+            <Label [text]="category" style="background-color: rgb(156, 154, 154);"></Label>
+        </GridLayout>
+    </ng-template>
+    <ng-template nsTemplateKey="green" let-category="item" let-i="index" let-odd="odd" let-even="even">
+        <!-- The item template can only have a single root view container (e.g. GridLayout, StackLayout, etc.)-->
+        <GridLayout height="200">
+            <Label [text]="category" style="background-color: rgb(238, 230, 230); "></Label>
+        </GridLayout>
+    </ng-template>
+</ListView>

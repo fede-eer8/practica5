@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "525176814698",
+    "firebase_url": "https://practica5-a0dd8.firebaseio.com",
+    "project_id": "practica5-a0dd8",
+    "storage_bucket": "practica5-a0dd8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525176814698:android:969d6e413a15cafd08de13",
+        "android_client_info": {
+          "package_name": "org.nativescript.practica5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525176814698-qrobu3hj4pljeddm13cf1toubkf9hvfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.nativescript.practica5",
+            "certificate_hash": "c12a61f7ec3d2c53184ee3c11a871dd3c03d18f7"
+          }
+        },
+        {
+          "client_id": "525176814698-gjqdacgl3muqn65e7cvo85ihnb4nlkok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_aGQR88lfemij6FBWZFByl-CYBA-T8e0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525176814698-af2i28lfn6d4nnd39r13b7fkff42sk6b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "525176814698-7qvamt1jnte1ussqnvpelsrs2bnqdp9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.nativescript.practica5"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

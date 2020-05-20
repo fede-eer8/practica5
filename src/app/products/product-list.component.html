@@ -1,0 +1,28 @@
+<ActionBar>
+    <!-- Should remove the navigation button -->
+    <NavigationButton ios:visibility="collapsed"></NavigationButton>
+    <Label text="Products" horizontalAlignment="center"></Label>
+</ActionBar>
+
+<GridLayout>
+    <RadListView [items]="products" (itemTap)="onProductTap($event)">
+        <ng-template tkListItemTemplate let-product="item">
+            <StackLayout class="items-list__item">
+                <GridLayout columns="auto, *, auto" rows="auto, 25" verticalAlignment="top">
+                    <Image [src]="product.imageUrl" rowSpan="2" width="120" height="120" margin="1" verticalAlignment="top"></Image>
+                    <Label [text]="product.name" textWrap="true" col="1" colSpan="2" minHeight="50" fontSize="16" margin="1"></Label>
+                    <Label col="1" colSpan="2" textWrap="true" fontSize="12" horizontalAlignment="left" verticalAlignment="bottom" margin="3">
+                        <FormattedString>
+                            <Span text="ARS$ "></Span>
+                            <Span [text]="product.price"></Span> -->
+                            <!-- <Span text="/day"></Span> -->
+                        </FormattedString> 
+                    </Label>
+                    <Label [text]="product.category" col="2" colSpan="2" color="#10C2B0" fontSize="14" verticalAlignment="bottom" margin="3"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+
+    <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+</GridLayout>

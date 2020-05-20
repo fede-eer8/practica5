@@ -1,0 +1,134 @@
+<BottomNavigation (selectedIndexChanged)="onSelectedIndexChanged($event)">
+    <TabStrip>
+        <TabStripItem class="navigation__item">
+            <!--
+                Note TabStripItem will only accept single Label and/or single Image elements that it
+                will "adopt"; any other layout elements you try to specify will be ignored
+            -->
+            <Label text="User"></Label>
+            <Image src="font://&#xf2bd;" class="far t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Browse"></Label>
+            <Image src="font://&#xf1ea;" class="far t-36"></Image>
+        </TabStripItem>
+        <!-- <TabStripItem class="navigation__item">
+            <Label text="Search"></Label>
+            <Image src="font://&#xf002;" class="fas t-36"></Image>
+        </TabStripItem>    background-color: #8C489F;-->
+        <TabStripItem class="navigation__item">
+            <Label text="Featured"></Label>
+            <Image src="font://&#xf06b;" class="fas t-36"></Image>
+        </TabStripItem>
+
+        <TabStripItem class="navigation__item">
+            <Label text="Categories"></Label>
+            <Image src="font://&#xf0b0;" class="fas t-36"></Image>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <!-- <page-router-outlet name="homeTab"></page-router-outlet> -->
+
+        <GridLayout class="nt-drawer__header nt-drawer__content" *ngIf="isLogued" columns="*,*,*" rows="50,auto,auto,auto,auto,auto,*">
+            <Image class="nt-drawer__header-image nt-drawer__header fas t-36" [src]="user.photo" height="200" width="200" row="1" col="0" colSpan="3" style=" margin: 5;"></Image>
+            <Button class="-outline -rounded-sm" text="Logout" (tap)="logout()" row="2" col="0" colSpan="3" style="background-color: rgb(106, 80, 221); margin: 5; "></Button>
+            <Label [text]="'Usuario: '+user.displayName" row="3" col="0" rowSpan="1" colSpan="3" textWrap="true" style=" margin: 5; " textAlignment="center"></Label>
+
+            <Label [text]="'Mail: '+user.userToken" row="4" col="0" colSpan="3" style=" margin: 5; " textAlignment="center"></Label>
+            <!-- <Button [text]="isLogued ? ''+user.displayName : 'Login'" (tap)="login()" row="0" col="1" colSpan="2" style="background-color: #FFFF66; margin: 5;"></Button> -->
+            <Label [text]="'Usuario: '+user.displayName" row="5" col="0" colSpan="3" textWrap="true" textAlignment="center"></Label>
+            <Label [text]="'Mail: '+user.userToken" row="6" col="0" colSpan="3" style=" margin: 5; " textAlignment="center"></Label>
+            <!-- <Button text="4 " row="3 " col="1 " colSpan="3 " style="margin: 5; "></Button>
+            <Button text="5 " row="4 " col="1 " colSpan="3 " style=" margin: 5; "></Button>
+            <Button text="6 " row="5 " col="1 " colSpan="3 " style=" margin: 5; "></Button> -->
+        </GridLayout>
+
+        <GridLayout *ngIf="!isLogued" columns="*,*,*" rows="50,auto,auto,auto,auto,auto,*">
+            <Image class="nt-drawer__header-image far t-36" src="font://&#xf2bd;" height="200" width="200" row="1" col="0" colSpan="3" style=" margin: 5;"></Image>
+            <Button class="-primary -rounded-sm" text="Login with Google" (tap)="login()" row="2" col="0" colSpan="3" style=" margin: 5;"></Button>
+            <Label [text]="'Usuario: '+user.displayName" row="3" col="0" rowSpan="1" colSpan="3" textWrap="true" style=" margin: 5; " textAlignment="center"></Label>
+            <Label [text]="'Mail: '+user.userToken" row="4" col="0" rowSpan="1" colSpan="3" style=" margin: 5; " textWrap="true" textAlignment="center"></Label>
+            <!-- <Button [text]="isLogued ? ''+user.displayName : 'Login'" (tap)="login()" row="0" col="1" colSpan="2" style="background-color: #FFFF66; margin: 5;"></Button> -->
+
+            <Label [text]="'Usuario: '+user.displayName" row="5" col="0" colSpan="3" textWrap="true" textAlignment="center"></Label>
+            <Label [text]="'Mail: '+user.userToken" row="6" col="0" colSpan="3" style=" margin: 5; " textAlignment="center"></Label>
+            <!-- <Button text="4 " row="6 " col="1 " colSpan="2 " style="margin: 5; "></Button> -->
+            <!-- <Button text="5 " row="7 " col="1 " colSpan="2 " style=" margin: 5; "></Button> -->
+            <!-- <Button text="6 " row="8 " col="1 " colSpan="2 " style=" margin: 5; "></Button> -->
+
+            <!-- <Button [text]="isLogued ? ''+user.displayName : 'Login'" (tap)="logout()" row=" 1 " col="1 " colSpan="2 " style="background-color: #AA0078; margin: 5; "></Button> -->
+
+        </GridLayout>
+    </TabContentItem>
+
+    <TabContentItem>
+        <page-router-outlet name="browseTab"></page-router-outlet>
+    </TabContentItem>
+
+    <!-- <TabContentItem>
+        <page-router-outlet name="searchTab"></page-router-outlet>
+    </TabContentItem> -->
+
+    <TabContentItem>
+        <page-router-outlet name="featuredTab"></page-router-outlet>
+    </TabContentItem>
+
+    <TabContentItem>
+        <page-router-outlet name="categoryTab"></page-router-outlet>
+    </TabContentItem>
+</BottomNavigation>
+
+<!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet  "font://&#xf2bd;"-->
+<!-- <RadSideDrawer [drawerTransition]="sideDrawerTransition">
+    <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
+        <StackLayout row="0" class="nt-drawer__header">
+            <Image class="nt-drawer__header-image fas t-36" src='font://&#xf2bd;'></Image>
+            <Image class="nt-drawer__header-image fas t-36" [src]='user.photo'></Image>
+            <Label class="nt-drawer__header-brand" [text]='user.displayName'></Label>
+            <Label class="nt-drawer__header-footnote" [text]='user.userToken'></Label>
+        </StackLayout>
+
+        <ScrollView row="1" class="nt-drawer__body">
+            <StackLayout>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
+                    <Label col="0" text="&#xf015;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Home" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/browse')" (tap)="onNavItemTap('/browse')">
+                    <Label col="0" text="&#xf1ea;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Browse" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/browse/category')" (tap)="onNavItemTap('/browse/category')">
+                    <Label col="0" text="&#xf100;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Categories" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/search')" (tap)="onNavItemTap('/search')">
+                    <Label col="0" text="&#xf002;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Search" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/featured')" (tap)="onNavItemTap('/featured')">
+                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Featured" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/products')" (tap)="onNavItemTap('/products')">
+                    <Label col="0" text="&#xf07a;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Products" class="p-r-10"></Label>
+                </GridLayout>
+
+                <StackLayout class="hr-dark"></StackLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/settings')">
+                    <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Settings" class="p-r-10"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+    <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer> -->
